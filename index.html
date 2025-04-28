@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MASIL 메뉴</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         html {
             scroll-behavior: smooth;
@@ -29,6 +30,7 @@
             white-space: nowrap;
             -webkit-overflow-scrolling: touch;
             scrollbar-width: none;
+            position: relative;
         }
         .nav-container::-webkit-scrollbar {
             display: none;
@@ -36,21 +38,59 @@
         .smooth-scroll {
             scroll-behavior: smooth;
         }
-        @media (max-width: 640px) {
-            .drink-image {
-                height: 150px;
-            }
+        .nav-menu {
+            display: inline-flex;
         }
+        /* تنظیمات برای پیکان‌های اسکرول */
+.scroll-arrow {
+    position: fixed;
+    top: 50%;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 0, 0, 0.616);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* پیکان چپ */
+.scroll-arrow.left {
+    left: 20px;
+    transform: translateY(-50%);
+}
+
+/* پیکان راست */
+.scroll-arrow.right {
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+/* تغییر رنگ پیکان‌ها هنگام هاور */
+.scroll-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* تنظیمات برای اندازه کوچکتر */
+.scroll-arrow svg {
+    width: 20px;
+    height: 20px;
+    fill: rgb(255, 0, 0);
+}
+
     </style>
 </head>
 <body class="bg-gray-50">
     <header class="bg-black text-white sticky top-0 z-50 shadow-lg">
         <div class="container mx-auto px-4 py-3">
             <h1 class="text-2xl font-bold text-center mb-2">MASIL</h1>
-            <div class="nav-container">
-                <nav class="inline-flex space-x-2 md:space-x-4 pb-2">
+            <div class="nav-container relative">
+                <div class="scroll-arrow left" onclick="scrollNav(-100)"><i class="fas fa-chevron-left"></i></div>
+                <div class="scroll-arrow right" onclick="scrollNav(100)"><i class="fas fa-chevron-right"></i></div>
+                <nav class="nav-menu space-x-2 md:space-x-4 pb-2">
                     <a href="#cocktail" class="menu-link px-4 py-2 rounded-full bg-gray-800 hover:bg-red-600 text-white font-medium transition-colors duration-300">칵테일/논알콜</a>
-                    <a href="#whiskey" class="menu-link px-4 py-2 rounded-full bg-gray-800 hover:bg-red-600 text-white font-medium transition-colors duration-300">위스키/꼬낙</a>
+                    <a href="#whiskey" class="menu-link px-4 py-2 rounded-full bg-gray-800 hover:bg-red-600 text-white font-medium transition-colors duration-300">위스키/꼬냑</a>
                     <a href="#beer" class="menu-link px-4 py-2 rounded-full bg-gray-800 hover:bg-red-600 text-white font-medium transition-colors duration-300">맥주/슈터</a>
                     <a href="#vodka" class="menu-link px-4 py-2 rounded-full bg-gray-800 hover:bg-red-600 text-white font-medium transition-colors duration-300">보드카/럼</a>
                     <a href="#tequila" class="menu-link px-4 py-2 rounded-full bg-gray-800 hover:bg-red-600 text-white font-medium transition-colors duration-300">테킬라/진</a>
@@ -61,37 +101,37 @@
         </div>
     </header>
 
-    <div class="container mx-auto px-4 py-8 smooth-scroll">
+   <div class="container mx-auto px-4 py-8 smooth-scroll">
         <div id="cocktail" class="menu-section mb-12">
             <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b-2 border-red-500 pb-2">칵테일/논알콜</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1551751299-1b51cab2694c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="클래식 마가리타" class="drink-image">
+                    <img src=" " alt="마가리타" class="drink-image">
                     <div class="p-6" onclick="toggleDetails('cocktail1')">
-                        <h3 class="text-xl font-semibold mb-2">클래식 마가리타</h3>
-                        <p class="text-gray-600">15,000원</p>
+                        <h3 class="text-xl font-semibold mb-2">마가리타</h3>
+                        <p class="text-gray-600">8,000원</p>
                         <div id="cocktail1" class="details mt-3 text-gray-500 hidden">
-                            <p>테킬라, 트리플 섹, 라임 주스로 만든 클래식 칵테일</p>
+                            <p>테킬라, 트리플 섹, 슈이트안드 사워 믹스 </p>
                         </div>
                     </div>
                 </div>
                 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="모히또" class="drink-image">
-                    <div class="p-6" onclick="toggleDetails('cocktail2')">
-                        <h3 class="text-xl font-semibold mb-2">모히또</h3>
-                        <p class="text-gray-600">14,000원</p>
-                        <div id="cocktail2" class="details mt-3 text-gray-500 hidden">
-                            <p>럼, 민트, 라임, 설탕으로 만든 상큼한 칵테일</p>
+                    <img src="https://drive.google.com/file/d/1Mssz2dCCASn-qyFjbSwKeLTY_ta7oKG7/view?usp=drivesdk" alt="마가리타" class="drink-image">
+                    <div class="p-6" onclick="toggleDetails('cocktail1')">
+                        <h3 class="text-xl font-semibold mb-2">마가리타</h3>
+                        <p class="text-gray-600">8,000원</p>
+                        <div id="cocktail1" class="details mt-3 text-gray-500 hidden">
+                            <p>테킬라, 트리플 섹, 슈이트안드 사워 믹스 </p>
                         </div>
                     </div>
                 </div>
                 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1514362545857-3bc1c29d0e89?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="블루 하와이" class="drink-image">
-                    <div class="p-6" onclick="toggleDetails('cocktail3')">
-                        <h3 class="text-xl font-semibold mb-2">블루 하와이</h3>
-                        <p class="text-gray-600">16,000원</p>
-                        <div id="cocktail3" class="details mt-3 text-gray-500 hidden">
-                            <p>럼, 블루 큐라소, 파인애플 주스로 만든 트로피칼 칵테일</p>
+                    <img src="https://drive.google.com/file/d/1Mssz2dCCASn-qyFjbSwKeLTY_ta7oKG7/view?usp=drivesdk" alt="마가리타" class="drink-image">
+                    <div class="p-6" onclick="toggleDetails('cocktail1')">
+                        <h3 class="text-xl font-semibold mb-2">마가리타</h3>
+                        <p class="text-gray-600">8,000원</p>
+                        <div id="cocktail1" class="details mt-3 text-gray-500 hidden">
+                            <p>테킬라, 트리플 섹, 슈이트안드 사워 믹스 </p>
                         </div>
                     </div>
                 </div>
@@ -99,35 +139,35 @@
         </div>
 
         <div id="whiskey" class="menu-section mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b-2 border-yellow-500 pb-2">위스키/꼬낙</h2>
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b-2 border-red-500 pb-2">위스키/꼬냑</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1609951651556-5334e2706168?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="잭 다니엘스" class="drink-image">
-                    <div class="p-6" onclick="toggleDetails('whiskey1')">
-                        <h3 class="text-xl font-semibold mb-2">잭 다니엘스</h3>
-                        <p class="text-gray-600">10,000원 (1잔)</p>
-                        <div id="whiskey1" class="details mt-3 text-gray-500 hidden">
-                            <p>미국 테네시 위스키, 부드러운 바닐라 향</p>
+                    <img src=" " alt="마가리타" class="drink-image">
+                    <div class="p-6" onclick="toggleDetails('cocktail1')">
+                        <h3 class="text-xl font-semibold mb-2">마가리타</h3>
+                        <p class="text-gray-600">8,000원</p>
+                        <div id="cocktail1" class="details mt-3 text-gray-500 hidden">
+                            <p>테킬라, 트리플 섹, 슈이트안드 사워 믹스 </p>
                         </div>
                     </div>
                 </div>
                 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1609951685621-c473dd4b0a1e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="조니 워커 블랙" class="drink-image">
-                    <div class="p-6" onclick="toggleDetails('whiskey2')">
-                        <h3 class="text-xl font-semibold mb-2">조니 워커 블랙</h3>
-                        <p class="text-gray-600">12,000원 (1잔)</p>
-                        <div id="whiskey2" class="details mt-3 text-gray-500 hidden">
-                            <p>스카치 위스키, 풍부한 오크 향</p>
+                    <img src="https://drive.google.com/file/d/1Mssz2dCCASn-qyFjbSwKeLTY_ta7oKG7/view?usp=drivesdk" alt="마가리타" class="drink-image">
+                    <div class="p-6" onclick="toggleDetails('cocktail1')">
+                        <h3 class="text-xl font-semibold mb-2">마가리타</h3>
+                        <p class="text-gray-600">8,000원</p>
+                        <div id="cocktail1" class="details mt-3 text-gray-500 hidden">
+                            <p>테킬라, 트리플 섹, 슈이트안드 사워 믹스 </p>
                         </div>
                     </div>
                 </div>
                 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1609951688586-3c7f0140f7ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="짐 빔" class="drink-image">
-                    <div class="p-6" onclick="toggleDetails('whiskey3')">
-                        <h3 class="text-xl font-semibold mb-2">짐 빔</h3>
-                        <p class="text-gray-600">9,000원 (1잔)</p>
-                        <div id="whiskey3" class="details mt-3 text-gray-500 hidden">
-                            <p>버번 위스키, 달콤한 오크 향</p>
+                    <img src="https://drive.google.com/file/d/1Mssz2dCCASn-qyFjbSwKeLTY_ta7oKG7/view?usp=drivesdk" alt="마가리타" class="drink-image">
+                    <div class="p-6" onclick="toggleDetails('cocktail1')">
+                        <h3 class="text-xl font-semibold mb-2">마가리타</h3>
+                        <p class="text-gray-600">8,000원</p>
+                        <div id="cocktail1" class="details mt-3 text-gray-500 hidden">
+                            <p>테킬라, 트리플 섹, 슈이트안드 사워 믹스 </p>
                         </div>
                     </div>
                 </div>
@@ -135,35 +175,35 @@
         </div>
 
         <div id="beer" class="menu-section mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b-2 border-yellow-500 pb-2">맥주/슈터</h2>
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b-2 border-red-500 pb-2">맥주/슈터</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1610041321327-b794c052db27?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="카스 프레시" class="drink-image">
-                    <div class="p-6" onclick="toggleDetails('beer1')">
-                        <h3 class="text-xl font-semibold mb-2">카스 프레시</h3>
-                        <p class="text-gray-600">5,000원</p>
-                        <div id="beer1" class="details mt-3 text-gray-500 hidden">
-                            <p>국내 대표 라거 맥주, 깔끔한 맛</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1610034773316-8fd434f7d89d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="기네스" class="drink-image">
-                    <div class="p-6" onclick="toggleDetails('beer2')">
-                        <h3 class="text-xl font-semibold mb-2">기네스</h3>
-                        <p class="text-gray-600">7,000원</p>
-                        <div id="beer2" class="details mt-3 text-gray-500 hidden">
-                            <p>아일랜드 스타우트, 크리미한 맛</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1610041321347-8d60e77cca56?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="호가든" class="drink-image">
-                    <div class="p-6" onclick="toggleDetails('beer3')">
-                        <h3 class="text-xl font-semibold mb-2">호가든</h3>
+                    <img src=" " alt="마가리타" class="drink-image">
+                    <div class="p-6" onclick="toggleDetails('cocktail1')">
+                        <h3 class="text-xl font-semibold mb-2">마가리타</h3>
                         <p class="text-gray-600">8,000원</p>
-                        <div id="beer3" class="details mt-3 text-gray-500 hidden">
-                            <p>벨기에 화이트 에일, 상큼한 오렌지 향</p>
+                        <div id="cocktail1" class="details mt-3 text-gray-500 hidden">
+                            <p>테킬라, 트리플 섹, 슈이트안드 사워 믹스 </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+                    <img src="https://drive.google.com/file/d/1Mssz2dCCASn-qyFjbSwKeLTY_ta7oKG7/view?usp=drivesdk" alt="마가리타" class="drink-image">
+                    <div class="p-6" onclick="toggleDetails('cocktail1')">
+                        <h3 class="text-xl font-semibold mb-2">마가리타</h3>
+                        <p class="text-gray-600">8,000원</p>
+                        <div id="cocktail1" class="details mt-3 text-gray-500 hidden">
+                            <p>테킬라, 트리플 섹, 슈이트안드 사워 믹스 </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+                    <img src="https://drive.google.com/file/d/1Mssz2dCCASn-qyFjbSwKeLTY_ta7oKG7/view?usp=drivesdk" alt="마가리타" class="drink-image">
+                    <div class="p-6" onclick="toggleDetails('cocktail1')">
+                        <h3 class="text-xl font-semibold mb-2">마가리타</h3>
+                        <p class="text-gray-600">8,000원</p>
+                        <div id="cocktail1" class="details mt-3 text-gray-500 hidden">
+                            <p>테킬라, 트리플 섹, 슈이트안드 사워 믹스 </p>
                         </div>
                     </div>
                 </div>
@@ -171,35 +211,35 @@
         </div>
 
         <div id="vodka" class="menu-section mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b-2 border-yellow-500 pb-2">보드카/럼</h2>
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b-2 border-red-500 pb-2">보드카/럼</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1609951688586-3c7f0140f7ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="앱솔루트" class="drink-image">
-                    <div class="p-6" onclick="toggleDetails('vodka1')">
-                        <h3 class="text-xl font-semibold mb-2">앱솔루트</h3>
-                        <p class="text-gray-600">9,000원 (1잔)</p>
-                        <div id="vodka1" class="details mt-3 text-gray-500 hidden">
-                            <p>스웨덴 보드카, 깔끔하고 중립적인 맛</p>
+                    <img src=" " alt="마가리타" class="drink-image">
+                    <div class="p-6" onclick="toggleDetails('cocktail1')">
+                        <h3 class="text-xl font-semibold mb-2">마가리타</h3>
+                        <p class="text-gray-600">8,000원</p>
+                        <div id="cocktail1" class="details mt-3 text-gray-500 hidden">
+                            <p>테킬라, 트리플 섹, 슈이트안드 사워 믹스 </p>
                         </div>
                     </div>
                 </div>
                 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1609951651556-5334e2706168?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="바카디" class="drink-image">
-                    <div class="p-6" onclick="toggleDetails('vodka2')">
-                        <h3 class="text-xl font-semibold mb-2">바카디</h3>
-                        <p class="text-gray-600">8,000원 (1잔)</p>
-                        <div id="vodka2" class="details mt-3 text-gray-500 hidden">
-                            <p>화이트 럼, 가벼운 바디감</p>
+                    <img src="https://drive.google.com/file/d/1Mssz2dCCASn-qyFjbSwKeLTY_ta7oKG7/view?usp=drivesdk" alt="마가리타" class="drink-image">
+                    <div class="p-6" onclick="toggleDetails('cocktail1')">
+                        <h3 class="text-xl font-semibold mb-2">마가리타</h3>
+                        <p class="text-gray-600">8,000원</p>
+                        <div id="cocktail1" class="details mt-3 text-gray-500 hidden">
+                            <p>테킬라, 트리플 섹, 슈이트안드 사워 믹스 </p>
                         </div>
                     </div>
                 </div>
                 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1609951688586-3c7f0140f7ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="스미노프" class="drink-image">
-                    <div class="p-6" onclick="toggleDetails('vodka3')">
-                        <h3 class="text-xl font-semibold mb-2">스미노프</h3>
-                        <p class="text-gray-600">7,000원 (1잔)</p>
-                        <div id="vodka3" class="details mt-3 text-gray-500 hidden">
-                            <p>러시아 보드카, 깔끔한 맛</p>
+                    <img src="https://drive.google.com/file/d/1Mssz2dCCASn-qyFjbSwKeLTY_ta7oKG7/view?usp=drivesdk" alt="마가리타" class="drink-image">
+                    <div class="p-6" onclick="toggleDetails('cocktail1')">
+                        <h3 class="text-xl font-semibold mb-2">마가리타</h3>
+                        <p class="text-gray-600">8,000원</p>
+                        <div id="cocktail1" class="details mt-3 text-gray-500 hidden">
+                            <p>테킬라, 트리플 섹, 슈이트안드 사워 믹스 </p>
                         </div>
                     </div>
                 </div>
@@ -207,35 +247,35 @@
         </div>
 
         <div id="tequila" class="menu-section mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b-2 border-yellow-500 pb-2">테킬라/진</h2>
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b-2 border-red-500 pb-2">테킬라/진</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1551751299-1b51cab2694c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="호세 쿠엘보" class="drink-image">
-                    <div class="p-6" onclick="toggleDetails('tequila1')">
-                        <h3 class="text-xl font-semibold mb-2">호세 쿠엘보</h3>
-                        <p class="text-gray-600">10,000원 (1잔)</p>
-                        <div id="tequila1" class="details mt-3 text-gray-500 hidden">
-                            <p>100% 아가베 테킬라, 부드러운 맛</p>
+                    <img src=" " alt="마가리타" class="drink-image">
+                    <div class="p-6" onclick="toggleDetails('cocktail1')">
+                        <h3 class="text-xl font-semibold mb-2">마가리타</h3>
+                        <p class="text-gray-600">8,000원</p>
+                        <div id="cocktail1" class="details mt-3 text-gray-500 hidden">
+                            <p>테킬라, 트리플 섹, 슈이트안드 사워 믹스 </p>
                         </div>
                     </div>
                 </div>
                 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1609951688586-3c7f0140f7ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="봄베이 사파이어" class="drink-image">
-                    <div class="p-6" onclick="toggleDetails('tequila2')">
-                        <h3 class="text-xl font-semibold mb-2">봄베이 사파이어</h3>
-                        <p class="text-gray-600">9,000원 (1잔)</p>
-                        <div id="tequila2" class="details mt-3 text-gray-500 hidden">
-                            <p>프리미엄 진, 복합적인 허브 향</p>
+                    <img src="https://drive.google.com/file/d/1Mssz2dCCASn-qyFjbSwKeLTY_ta7oKG7/view?usp=drivesdk" alt="마가리타" class="drink-image">
+                    <div class="p-6" onclick="toggleDetails('cocktail1')">
+                        <h3 class="text-xl font-semibold mb-2">마가리타</h3>
+                        <p class="text-gray-600">8,000원</p>
+                        <div id="cocktail1" class="details mt-3 text-gray-500 hidden">
+                            <p>테킬라, 트리플 섹, 슈이트안드 사워 믹스 </p>
                         </div>
                     </div>
                 </div>
                 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1609951651556-5334e2706168?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="파트론" class="drink-image">
-                    <div class="p-6" onclick="toggleDetails('tequila3')">
-                        <h3 class="text-xl font-semibold mb-2">파트론</h3>
-                        <p class="text-gray-600">12,000원 (1잔)</p>
-                        <div id="tequila3" class="details mt-3 text-gray-500 hidden">
-                            <p>프리미엄 테킬라, 부드러운 맛</p>
+                    <img src="https://drive.google.com/file/d/1Mssz2dCCASn-qyFjbSwKeLTY_ta7oKG7/view?usp=drivesdk" alt="마가리타" class="drink-image">
+                    <div class="p-6" onclick="toggleDetails('cocktail1')">
+                        <h3 class="text-xl font-semibold mb-2">마가리타</h3>
+                        <p class="text-gray-600">8,000원</p>
+                        <div id="cocktail1" class="details mt-3 text-gray-500 hidden">
+                            <p>테킬라, 트리플 섹, 슈이트안드 사워 믹스 </p>
                         </div>
                     </div>
                 </div>
@@ -243,35 +283,35 @@
         </div>
 
         <div id="liqueur" class="menu-section mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b-2 border-yellow-500 pb-2">리큐르/스파클링와인</h2>
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b-2 border-red-500 pb-2">리큐르/스파클링와인</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="말리부" class="drink-image">
-                    <div class="p-6" onclick="toggleDetails('liqueur1')">
-                        <h3 class="text-xl font-semibold mb-2">말리бе</h3>
-                        <p class="text-gray-600">8,000원 (1잔)</p>
-                        <div id="liqueur1" class="details mt-3 text-gray-500 hidden">
-                            <p>코코넛 리큐르, 달콤한 맛</p>
+                    <img src=" " alt="마가리타" class="drink-image">
+                    <div class="p-6" onclick="toggleDetails('cocktail1')">
+                        <h3 class="text-xl font-semibold mb-2">마가리타</h3>
+                        <p class="text-gray-600">8,000원</p>
+                        <div id="cocktail1" class="details mt-3 text-gray-500 hidden">
+                            <p>테킬라, 트리플 섹, 슈이트안드 사워 믹스 </p>
                         </div>
                     </div>
                 </div>
                 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1514362545857-3bc1c29d0e89?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="프로세코" class="drink-image">
-                    <div class="p-6" onclick="toggleDetails('liqueur2')">
-                        <h3 class="text-xl font-semibold mb-2">프로세코</h3>
-                        <p class="text-gray-600">25,000원 (병)</p>
-                        <div id="liqueur2" class="details mt-3 text-gray-500 hidden">
-                            <p>이탈리아 스파클링 와인, 상큼한 과일 향</p>
+                    <img src="https://drive.google.com/file/d/1Mssz2dCCASn-qyFjbSwKeLTY_ta7oKG7/view?usp=drivesdk" alt="마가리타" class="drink-image">
+                    <div class="p-6" onclick="toggleDetails('cocktail1')">
+                        <h3 class="text-xl font-semibold mb-2">마가리타</h3>
+                        <p class="text-gray-600">8,000원</p>
+                        <div id="cocktail1" class="details mt-3 text-gray-500 hidden">
+                            <p>테킬라, 트리플 섹, 슈이트안드 사워 믹스 </p>
                         </div>
                     </div>
                 </div>
                 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1551751299-1b51cab2694c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="베일리스" class="drink-image">
-                    <div class="p-6" onclick="toggleDetails('liqueur3')">
-                        <h3 class="text-xl font-semibold mb-2">베일리스</h3>
-                        <p class="text-gray-600">9,000원 (1잔)</p>
-                        <div id="liqueur3" class="details mt-3 text-gray-500 hidden">
-                            <p>아이리시 크림 리큐르, 부드러운 맛</p>
+                    <img src="https://drive.google.com/file/d/1Mssz2dCCASn-qyFjbSwKeLTY_ta7oKG7/view?usp=drivesdk" alt="마가리타" class="drink-image">
+                    <div class="p-6" onclick="toggleDetails('cocktail1')">
+                        <h3 class="text-xl font-semibold mb-2">마가리타</h3>
+                        <p class="text-gray-600">8,000원</p>
+                        <div id="cocktail1" class="details mt-3 text-gray-500 hidden">
+                            <p>테킬라, 트리플 섹, 슈이트안드 사워 믹스 </p>
                         </div>
                     </div>
                 </div>
@@ -279,40 +319,44 @@
         </div>
 
         <div id="menu" class="menu-section mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b-2 border-yellow-500 pb-2">메뉴/음료</h2>
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b-2 border-red-500 pb-2">메뉴/음료</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="치즈 플래터" class="drink-image">
-                    <div class="p-6" onclick="toggleDetails('menu1')">
-                        <h3 class="text-xl font-semibold mb-2">치즈 플래터</h3>
-                        <p class="text-gray-600">18,000원</p>
-                        <div id="menu1" class="details mt-3 text-gray-500 hidden">
-                            <p>3종 치즈와 건과일, 크래커 구성</p>
+                    <img src=" " alt="마가리타" class="drink-image">
+                    <div class="p-6" onclick="toggleDetails('cocktail1')">
+                        <h3 class="text-xl font-semibold mb-2">마가리타</h3>
+                        <p class="text-gray-600">8,000원</p>
+                        <div id="cocktail1" class="details mt-3 text-gray-500 hidden">
+                            <p>테킬라, 트리플 섹, 슈이트안드 사워 믹스 </p>
                         </div>
                     </div>
                 </div>
                 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1603569283847-aa6a53b5db04?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="레몬에이드" class="drink-image">
-                    <div class="p-6" onclick="toggleDetails('menu2')">
-                        <h3 class="text-xl font-semibold mb-2">레몬에이드</h3>
-                        <p class="text-gray-600">6,000원</p>
-                        <div id="menu2" class="details mt-3 text-gray-500 hidden">
-                            <p>상큼한 레몬에이드, 탄산 추가 가능</p>
+                    <img src="https://drive.google.com/file/d/1Mssz2dCCASn-qyFjbSwKeLTY_ta7oKG7/view?usp=drivesdk" alt="마가리타" class="drink-image">
+                    <div class="p-6" onclick="toggleDetails('cocktail1')">
+                        <h3 class="text-xl font-semibold mb-2">마가리타</h3>
+                        <p class="text-gray-600">8,000원</p>
+                        <div id="cocktail1" class="details mt-3 text-gray-500 hidden">
+                            <p>테킬라, 트리플 섹, 슈이트안드 사워 믹스 </p>
                         </div>
                     </div>
                 </div>
                 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1512621776951-57138360aece?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="과일 플래터" class="drink-image">
-                    <div class="p-6" onclick="toggleDetails('menu3')">
-                        <h3 class="text-xl font-semibold mb-2">과일 플래터</h3>
-                        <p class="text-gray-600">15,000원</p>
-                        <div id="menu3" class="details mt-3 text-gray-500 hidden">
-                            <p>계절 과일 5종 구성</p>
+                    <img src="https://drive.google.com/file/d/1Mssz2dCCASn-qyFjbSwKeLTY_ta7oKG7/view?usp=drivesdk" alt="마가리타" class="drink-image">
+                    <div class="p-6" onclick="toggleDetails('cocktail1')">
+                        <h3 class="text-xl font-semibold mb-2">마가리타</h3>
+                        <p class="text-gray-600">8,000원</p>
+                        <div id="cocktail1" class="details mt-3 text-gray-500 hidden">
+                            <p>테킬라, 트리플 섹, 슈이트안드 사워 믹스 </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+                <!-- Rest of your menu items -->
+            </div>
+        </div>
+        <!-- Include all other sections (whiskey, beer, vodka, tequila, liqueur, menu) -->
     </div>
 
     <script>
@@ -323,6 +367,8 @@
 
         // Highlight active menu link
         const menuLinks = document.querySelectorAll('.menu-link');
+        const navContainer = document.querySelector('.nav-container');
+        const navMenu = document.querySelector('.nav-menu');
         
         menuLinks.forEach(link => {
             link.addEventListener('click', function(e) {
@@ -345,6 +391,20 @@
                 // Update active link
                 menuLinks.forEach(l => l.classList.remove('bg-red-600', 'text-white'));
                 this.classList.add('bg-red-600', 'text-white');
+                
+                // Center the active link in the nav container
+                if (window.innerWidth <= 768) {
+                    const linkRect = this.getBoundingClientRect();
+                    const containerRect = navContainer.getBoundingClientRect();
+                    const containerCenter = containerRect.left + containerRect.width / 2;
+                    const linkCenter = linkRect.left + linkRect.width / 2;
+                    const scrollAmount = linkCenter - containerCenter;
+                    
+                    navContainer.scrollBy({
+                        left: scrollAmount,
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
 
@@ -362,16 +422,67 @@
                 link.classList.remove('bg-red-600', 'text-white');
                 if (link.getAttribute('href').substring(1) === currentSection) {
                     link.classList.add('bg-red-600', 'text-white');
+                    
+                    // Auto-scroll nav container to show active link on mobile
+                    if (window.innerWidth <= 768) {
+                        const linkRect = link.getBoundingClientRect();
+                        const containerRect = navContainer.getBoundingClientRect();
+                        const containerCenter = containerRect.left + containerRect.width / 2;
+                        const linkCenter = linkRect.left + linkRect.width / 2;
+                        const scrollAmount = linkCenter - containerCenter;
+                        
+                        navContainer.scrollBy({
+                            left: scrollAmount,
+                            behavior: 'smooth'
+                        });
+                    }
                 }
             });
         });
+
+        // Scroll navigation arrows
+        function scrollNav(amount) {
+            navContainer.scrollBy({
+                left: amount,
+                behavior: 'smooth'
+            });
+        }
+
+        // Update arrow visibility based on scroll position
+function updateArrowVisibility() {
+    const leftArrow = document.querySelector('.scroll-arrow.left');
+    const rightArrow = document.querySelector('.scroll-arrow.right');
+    
+    // پیکان‌ها همیشه نمایش داده شوند و فقط موقعیت اسکرول بررسی شود
+    if (navContainer.scrollLeft <= 10) {
+        leftArrow.style.display = 'none';
+    } else {
+        leftArrow.style.display = 'flex';
+    }
+    
+    if (navContainer.scrollLeft + navContainer.clientWidth >= navMenu.scrollWidth - 10) {
+        rightArrow.style.display = 'none';
+    } else {
+        rightArrow.style.display = 'flex';
+    }
+}
+
+// اطمینان از به‌روزرسانی وضعیت پیکان‌ها
+navContainer.addEventListener('scroll', updateArrowVisibility);
+window.addEventListener('resize', updateArrowVisibility);
+
+// ابتدا وضعیت پیکان‌ها را تنظیم می‌کنیم
+updateArrowVisibility();
+
+        // Initialize arrow visibility
+        updateArrowVisibility();
 
         // Double back button to close window on mobile
         let backButtonCount = 0;
         let backButtonTimer = null;
         
         window.addEventListener('popstate', function(event) {
-            if (window.innerWidth <= 768) { // Only for mobile/tablet
+            if (window.innerWidth <= 768) {
                 backButtonCount++;
                 
                 if (backButtonCount === 1) {
@@ -390,7 +501,6 @@
             const html = document.documentElement;
             html.style.scrollBehavior = 'smooth';
             
-            // Reset scroll behavior after scroll is complete
             window.addEventListener('scroll', function() {
                 clearTimeout(window.scrollEndTimer);
                 window.scrollEndTimer = setTimeout(function() {
