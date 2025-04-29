@@ -106,6 +106,18 @@
     opacity: 1;
 }
 
+footer.hidden {
+    display: none;
+}
+footer.visible {
+    display: block;
+}
+.hidden {
+    display: none;
+}
+.visible {
+    display: block;
+}
     </style>
 </head>
 <body class="bg-gray-50">
@@ -132,47 +144,814 @@
         <div id="cocktail" class="menu-section mb-12">
             <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b-2 border-red-500 pb-2">칵테일/논알콜</h2>
             <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-                    <img src=" " alt="마가리타" class="drink-image">
-                    <div class="p-6" onclick="toggleDetails('cocktail1')">
-                        <h3 class="text-xl font-semibold mb-2">마가리타</h3>
-                        <p class="text-gray-600">8,000원</p>
-                        </div>
-                        <div id="cocktail1" class="details mt-3 text-gray-500 ">
-                            <p>테킬라, 트리플 섹, 슈이트안드 사워 믹스 </p>
-                    </div>
+                <!-- 진토닉 -->
+            <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+                <img src="https://via.placeholder.com/400x300?text=Gin+Tonic" alt="진토닉" class="drink-image">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">진토닉</h3>
+                    <p class="text-gray-600">5,000원</p>
                 </div>
-                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-                    <img src="https://drive.google.com/file/d/1Mssz2dCCASn-qyFjbSwKeLTY_ta7oKG7/view?usp=drivesdk" alt="마가리타" class="drink-image">
-                    <div class="p-6" onclick="toggleDetails('cocktail1')">
-                        <h3 class="text-xl font-semibold mb-2">마가리타</h3>
-                        <p class="text-gray-600">8,000원</p> 
-                        </div>
-                        <div id="cocktail1" class="details mt-3 text-gray-500 ">
-                            <p>테킬라, 트리플 섹, 슈이트안드 사워 믹스 </p>
-                    </div>
-                </div>
-                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-                    <img src="https://drive.google.com/file/d/1Mssz2dCCASn-qyFjbSwKeLTY_ta7oKG7/view?usp=drivesdk" alt="마가리타" class="drink-image">
-                    <div class="p-6" onclick="toggleDetails('cocktail1')">
-                        <h3 class="text-xl font-semibold mb-2">마가리타</h3>
-                        <p class="text-gray-600">8,000원</p> 
-                        </div>
-                        <div id="cocktail1" class="details mt-3 text-gray-500 ">
-                            <p>테킬라, 트리플 섹, 슈이트안드 사워 믹스 </p>
-                    </div>
-                </div>
-                <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-                    <img src="https://drive.google.com/file/d/1Mssz2dCCASn-qyFjbSwKeLTY_ta7oKG7/view?usp=drivesdk" alt="마가리타" class="drink-image">
-                    <div class="p-6" onclick="toggleDetails('cocktail1')">
-                        <h3 class="text-xl font-semibold mb-2">마가리타</h3>
-                        <p class="text-gray-600">8,000원</p>
-                        </div>
-                        <div id="cocktail1" class="details mt-3 text-gray-500 ">
-                            <p>테킬라, 트리플 섹, 슈이트안드 사워 믹스 </p>
-                    </div>
+                <div class="details">
+                    <p>진과 토닉워터의 조합으로 깔끔하고 쌉싸름한 맛</p>
                 </div>
             </div>
+            
+            <!-- 진피즈 -->
+            <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+                <img src="https://via.placeholder.com/400x300?text=Gin+Fizz" alt="진피즈" class="drink-image">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">진피즈</h3>
+                    <p class="text-gray-600">5,000원</p>
+                </div>
+                <div class="details">
+                    <p>진에 탄산수와 레몬즙을 더한 상큼한 칵테일</p>
+                </div>
+            </div>
+            
+            <!-- 큐바리브레 -->
+            <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+                <img src="https://via.placeholder.com/400x300?text=Cuba+Libre" alt="큐바리브레" class="drink-image">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">큐바리브레</h3>
+                    <p class="text-gray-600">5,000원</p>
+                </div>
+                <div class="details">
+                    <p>럼과 콜라, 라임즙이 어우러진 시원한 음료 같은 칵테일</p>
+                </div>
+            </div>
+            
+            <!-- 스크류드라이버 -->
+            <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+                <img src="https://via.placeholder.com/400x300?text=Screwdriver" alt="스크류드라이버" class="drink-image">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">스크류드라이버</h3>
+                    <p class="text-gray-600">5,000원</p>
+                </div>
+                <div class="details">
+                    <p>보드카와 오렌지 주스의 깔끔한 조합</p>
+                </div>
+            </div>
+            
+            <!-- 케이프코드 -->
+            <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+                <img src="https://via.placeholder.com/400x300?text=Cape+Cod" alt="케이프코드" class="drink-image">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">케이프코드</h3>
+                    <p class="text-gray-600">5,000원</p>
+                </div>
+                <div class="details">
+                    <p>보드카와 크랜베리 주스로 만든 새콤한 칵테일</p>
+                </div>
+            </div>
+            
+            <!-- 블루하와이 -->
+            <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+                <img src="https://via.placeholder.com/400x300?text=Blue+Hawaii" alt="블루하와이" class="drink-image">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">블루하와이</h3>
+                    <p class="text-gray-600">5,000원</p>
+                </div>
+                <div class="details">
+                    <p>럼, 블루 큐라소, 파인애플쥬스로 만든 달콤한 열대 칵테일</p>
+                </div>
+            </div>
+            
+            <!-- 준벅 -->
+            <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+                <img src="https://via.placeholder.com/400x300?text=Jungle+Juice" alt="준벅" class="drink-image">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">준벅</h3>
+                    <p class="text-gray-600">5,000원</p>
+                </div>
+                <div class="details">
+                    <p>멜론리큐르, 럼, 파인애플이 어우러진 달콤한 칵테일</p>
+                </div>
+            </div>
+            
+            <!-- 섹스온더비치 -->
+            <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+                <img src="https://via.placeholder.com/400x300?text=Sex+on+the+Beach" alt="섹스온더비치" class="drink-image">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">섹스온더비치</h3>
+                    <p class="text-gray-600">5,000원</p>
+                </div>
+                <div class="details">
+                    <p>보드카와 과일주스가 섞인 달달한 칵테일</p>
+                </div>
+            </div>
+            
+            <!-- 시브리즈 -->
+            <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+                <img src="https://via.placeholder.com/400x300?text=Sea+Breeze" alt="시브리즈" class="drink-image">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">시브리즈</h3>
+                    <p class="text-gray-600">5,000원</p>
+                </div>
+                <div class="details">
+                    <p>보드카, 크랜베리, 자몽주스의 상큼한 조화</p>
+                </div>
+            </div>
+            
+            <!-- 미도리사워 -->
+            <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+                <img src="https://via.placeholder.com/400x300?text=Midori+Sour" alt="미도리사워" class="drink-image">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">미도리사워</h3>
+                    <p class="text-gray-600">5,000원</p>
+                </div>
+                <div class="details">
+                    <p>멜론리큐르와 레몬의 새콤달콤한 맛</p>
+                    
+                </div>
+            </div>
+            <!-- 몽키바나나 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/몽키바나나.jpg" alt="몽키바나나" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">몽키바나나</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>바나나우유 맛이 나는 달콤한 디저트 칵테일.</p>
+    </div>
+</div>
+
+<!-- 핑크펀치 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/핑크펀치.jpg" alt="핑크펀치" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">핑크펀치</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>자몽리큐르와 탄산수를 섞어 만든 상큼하고 달콤한 칵테일.</p>
+    </div>
+</div>
+
+<!-- 솔티독 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/솔티독.jpg" alt="솔티독" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">솔티독</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>보드카와 자몽주스에 소금 림을 더한 새콤짭짤한 칵테일.</p>
+    </div>
+</div>
+
+<!-- 김렛 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/김렛.jpg" alt="김렛" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">김렛</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>진과 라임주스를 섞은 간결한 클래식 칵테일.</p>
+    </div>
+</div>
+
+<!-- 드라이마티니 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/드라이마티니.jpg" alt="드라이마티니" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">드라이마티니</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>진과 드라이 베르무트를 섞은 깔끔하고 강한 칵테일.</p>
+    </div>
+</div>
+
+<!-- 보드카마티니 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/보드카마티니.jpg" alt="보드카마티니" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">보드카마티니</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>보드카로 만든 마티니로, 보다 부드럽고 중성적인 맛.</p>
+                </div>
+           </div>
+           <!-- 애플마티니 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/애플마티니.jpg" alt="애플마티니" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">애플마티니</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>보드카와 사과리큐르로 만든 새콤달콤한 마티니.</p>
+    </div>
+</div>
+
+<!-- 에스프레소 마티니 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/에스프레소 마티니.jpg" alt="에스프레소 마티니" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">에스프레소 마티니</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>보드카, 커피리큐르, 에스프레소가 어우러진 쌉쌀한 칵테일.</p>
+    </div>
+</div>
+
+<!-- 블루마가리타 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/블루마가리타.jpg" alt="블루마가리타" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">블루마가리타</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>블루 큐라소가 들어간 화려한 색감의 마가리타.</p>
+    </div>
+</div>
+
+<!-- 체리사이드카 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/체리사이드카.jpg" alt="체리사이드카" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">체리사이드카</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>브랜디 기반에 체리향이 나는 칵테일.</p>
+    </div>
+</div>
+
+<!-- 싱가폴슬링 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/싱가폴슬링.jpg" alt="싱가폴슬링" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">싱가폴슬링</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>진과 여러 과일 리큐르가 어우러진 달콤하고 복잡한 맛.</p>
+    </div>
+</div>
+
+<!-- 마드라스 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/마드라스.jpg" alt="마드라스" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">마드라스</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>보드카, 크랜베리, 오렌지 주스의 부드러운 조화.</p>
+    </div>
+</div>
+
+<!-- 데킬라선라이즈 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/데킬라선라이즈.jpg" alt="데킬라선라이즈" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">데킬라선라이즈</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>데킬라, 오렌지주스, 그레나딘시럽이 층을 이루는 칵테일.</p>
+    </div>
+</div>
+
+<!-- 레몬드랍 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/레몬드랍.jpg" alt="레몬드랍" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">레몬드랍</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>보드카와 레몬즙, 설탕이 어우러진 새콤달콤한 칵테일.</p>
+    </div>
+</div>
+
+<!-- 마가리타 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/마가리타.jpg" alt="마가리타" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">마가리타</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>데킬라, 라임, 트리플 섹으로 만든 상큼한 대표 칵테일.</p>
+    </div>
+</div>
+
+<!-- 롱아일랜드아이스티 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/롱아일랜드아이스티.jpg" alt="롱아일랜드아이스티" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">롱아일랜드아이스티</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>여러 술을 섞고 콜라로 마무리한 강력한 칵테일.</p>
+    </div>
+</div>
+
+<!-- 롱비치아이스티 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/롱비치아이스티.jpg" alt="롱비치아이스티" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">롱비치아이스티</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>롱아일랜드에서 콜라 대신 크랜베리를 쓴 변형 칵테일.</p>
+    </div>
+</div>
+
+<!-- 도쿄아이스티 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/도쿄아이스티.jpg" alt="도쿄아이스티" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">도쿄아이스티</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>멜론리큐르가 들어간 녹색 버전의 롱아일랜드아이스티.</p>
+    </div>
+</div>
+
+<!-- AMF -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/AMF.jpg" alt="AMF" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">AMF</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>블루 큐라소와 여러 술이 들어간 강한 블루 칵테일.</p>
+    </div>
+</div>
+
+<!-- 블랙러시안 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/블랙러시안.jpg" alt="블랙러시안" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">블랙러시안</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>보드카와 커피리큐르의 진한 조합.</p>
+    </div>
+</div>
+
+<!-- 화이트러시안 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/화이트러시안.jpg" alt="화이트러시안" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">화이트러시안</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>블랙러시안에 우유를 더한 부드러운 칵테일.</p>
+    </div>
+</div>
+
+<!-- 깔루아밀크 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/깔루아밀크.jpg" alt="깔루아밀크" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">깔루아밀크</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>커피리큐르와 우유가 어우러진 달콤한 칵테일.</p>
+    </div>
+</div>
+<!-- 모건앤콕 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/모건앤콕.jpg" alt="모건앤콕" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">모건앤콕</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>캡틴 모건 럼과 콜라를 섞은 시원한 칵테일.</p>
+    </div>
+</div>
+
+<!-- 잭앤콕 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/잭앤콕.jpg" alt="잭앤콕" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">잭앤콕</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>잭다니엘 위스키와 콜라의 클래식 조합의 칵테일.</p>
+    </div>
+</div>
+
+<!-- 버번콕 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/버번콕.jpg" alt="버번콕" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">버번콕</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>버번 위스키와 콜라로 만든 칵테일.</p>
+    </div>
+</div>
+
+<!-- 말리부밀크 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/말리부밀크.jpg" alt="말리부밀크" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">말리부밀크</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>코코넛럼과 우유가 어우러진 부드러운 칵테일.</p>
+    </div>
+</div>
+
+<!-- 말리부오렌지 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/말리부오렌지.jpg" alt="말리부오렌지" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">말리부오렌지</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>코코넛럼과 오렌지 주스가 어우러진 상큼한 칵테일.</p>
+    </div>
+</div>
+
+<!-- 말리부파인애플 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/말리부파인애플.jpg" alt="말리부파인애플" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">말리부파인애플</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>코코넛럼과 파인애플주스의 트로피컬 조합.</p>
+    </div>
+</div>
+
+<!-- 카시스오렌지 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/카시스오렌지.jpg" alt="카시스오렌지" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">카시스오렌지</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>블랙커런트 리큐르와 오렌지 주스가 어우러진 달콤한 칵테일.</p>
+        
+        </div>
+        </div>
+        <!-- 피나콜라다 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/피나콜라다.jpg" alt="피나콜라다" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">피나콜라다</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>럼, 코코넛, 파인애플이 들어간 대표적인 열대 칵테일.</p>
+    </div>
+</div>
+
+<!-- 코스모폴리탄 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/코스모폴리탄.jpg" alt="코스모폴리탄" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">코스모폴리탄</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>보드카, 크랜베리, 레몬이 조화를 이루는 세련된 칵테일.</p>
+    </div>
+</div>
+
+<!-- 옥보단 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/옥보단.jpg" alt="옥보단" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">옥보단</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>달콤하고 유니크한 맛의 먹기 편한 칵테일.</p>
+    </div>
+</div>
+
+<!-- 데카르트 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/데카르트.jpg" alt="데카르트" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">데카르트</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>철학자 이름을 딴 창작 칵테일, 높은 도수와 깊은 여운이 특징인 칵테일.</p>
+    </div>
+</div>
+
+<!-- 카타르시스 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/카타르시스.jpg" alt="카타르시스" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">카타르시스</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>감정의 해소를 의미하는 이름의 높은 도수의 사워한 맛의 칵테일.</p>
+    </div>
+</div>
+<!-- 모히토 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/모히토.jpg" alt="모히토" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">모히토</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>럼, 라임, 민트가 어우러진 상쾌한 칵테일.</p>
+       </div>
+    </div>
+    <!-- 피나콜라다 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/피나콜라다.jpg" alt="피나콜라다" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">피나콜라다</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>럼, 코코넛, 파인애플이 들어간 대표적인 열대 칵테일.</p>
+    </div>
+</div>
+
+<!-- 코스모폴리탄 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/코스모폴리탄.jpg" alt="코스모폴리탄" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">코스모폴리탄</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>보드카, 크랜베리, 레몬이 조화를 이루는 세련된 칵테일.</p>
+    </div>
+</div>
+
+<!-- 옥보단 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/옥보단.jpg" alt="옥보단" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">옥보단</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>달콤하고 유니크한 맛의 먹기 편한 칵테일.</p>
+    </div>
+</div>
+
+<!-- 데카르트 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/데카르트.jpg" alt="데카르트" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">데카르트</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>철학자 이름을 딴 창작 칵테일로, 높은 도수와 깊은 여운이 특징입니다.</p>
+    </div>
+</div>
+
+<!-- 카타르시스 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/카타르시스.jpg" alt="카타르시스" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">카타르시스</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>감정의 해소를 의미하는 이름의 높은 도수의 사워한 맛의 칵테일.</p>
+    </div>
+</div>
+    <!-- 피치크러쉬 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/피치크러쉬.jpg" alt="피치크러쉬" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">피치크러쉬</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>복숭아리큐르를 베이스로 한 상큼하고 달달한 칵테일.</p>
+    </div>
+</div>
+
+<!-- 파우스트 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/파우스트.jpg" alt="파우스트" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">파우스트</h3>
+        <p class="text-gray-600">8,000원</p>
+    </div>
+    <div class="details">
+        <p>블랙커런트와 두 가지의 럼이 섞인 고도수의 달달한 맛의 칵테일.</p>
+    </div>
+</div>
+
+<!-- 갓파더 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/갓파더.jpg" alt="갓파더" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">갓파더</h3>
+        <p class="text-gray-600">8,000원</p>
+    </div>
+    <div class="details">
+        <p>위스키와 아몬드 리큐르의 부드러운 조화의 칵테일.</p>
+    </div>
+</div>
+
+<!-- 갓마더 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/갓마더.jpg" alt="갓마더" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">갓마더</h3>
+        <p class="text-gray-600">8,000원</p>
+    </div>
+    <div class="details">
+        <p>보드카와 아몬드 리큐르가 어우러진 달콤한 칵테일.</p>
+    </div>
+</div>
+
+<!-- 카시스 프라페 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/카시스프라페.jpg" alt="카시스 프라페" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">카시스 프라페</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>카시스 리큐르에 얼음을 간 슬러시 스타일 칵테일.</p>
+    </div>
+</div>
+    <!-- 화이트레이디 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/화이트레이디.jpg" alt="화이트레이디" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">화이트레이디</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>진, 트리플섹, 레몬즙이 어우러진 새콤한 클래식 칵테일.</p>
+    </div>
+</div>
+
+<!-- XYZ -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/XYZ.jpg" alt="XYZ" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">XYZ</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>럼, 트리플섹, 레몬즙이 어우러진 상큼한 칵테일.</p>
+    </div>
+</div>
+
+<!-- 다이키리 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/다이키리.jpg" alt="다이키리" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">다이키리</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>럼, 라임즙, 트리플섹으로 만든 상큼한 클래식 칵테일.</p>
+    </div>
+</div>
+
+<!-- 카미카제 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/카미카제.jpg" alt="카미카제" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">카미카제</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>보드카, 라임즙, 트리플섹이 어우러진 강렬한 맛의 칵테일.</p>
+    </div>
+</div>
+
+<!-- 와일드플라워 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/와일드플라워.jpg" alt="와일드플라워" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">와일드플라워</h3>
+        <p class="text-gray-600">8,000원</p>
+    </div>
+    <div class="details">
+        <p>위스키 베이스의 달콤한 향을 가진 칵테일.</p>
+    </div>
+</div>
+
+<!-- 베일리스밀크 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/베일리스밀크.jpg" alt="베일리스밀크" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">베일리스밀크</h3>
+        <p class="text-gray-600">7,000원</p>
+    </div>
+    <div class="details">
+        <p>베일리스와 우유의 부드러운 조합의 칵테일.</p>
+    </div>
+</div>
+
+<!-- 위스키 사워 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/위스키사워.jpg" alt="위스키 사워" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">위스키 사워</h3>
+        <p class="text-gray-600">8,000원</p>
+    </div>
+    <div class="details">
+        <p>위스키에 레몬과 설탕을 더한 새콤한 칵테일.</p>
+    </div>
+</div>
+<!-- 올드패션드 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/올드패션드.jpg" alt="올드패션드" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">올드패션드</h3>
+        <p class="text-gray-600">10,000원</p>
+    </div>
+    <div class="details">
+        <p>위스키, 설탕, 비터스로 만든 전통적이고 진한 맛의 클래식 칵테일.</p>
+    </div>
+</div>
+
+<!-- 맨하탄 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/맨하탄.jpg" alt="맨하탄" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">맨하탄</h3>
+        <p class="text-gray-600">10,000원</p>
+    </div>
+    <div class="details">
+        <p>위스키와 스위트 베르무트, 비터스가 조화를 이루는 클래식 칵테일.</p>
+    </div>
+</div>
+
+<!-- 러스티네일 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/러스티네일.jpg" alt="러스티네일" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">러스티네일</h3>
+        <p class="text-gray-600">10,000원</p>
+    </div>
+    <div class="details">
+        <p>스카치 위스키와 드람부이의 부드럽고 진한 조합의 칵테일.</p>
+    </div>
+</div>
+
+<!-- 네그로니 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/네그로니.jpg" alt="네그로니" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">네그로니</h3>
+        <p class="text-gray-600">10,000원</p>
+    </div>
+    <div class="details">
+        <p>진, 캄파리, 베르무트가 어우러진 쌉싸름한 칵테일.</p>
+    </div>
+</div>
+
+<!-- 오르가즘 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/오르가즘.jpg" alt="오르가즘" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">오르가즘</h3>
+        <p class="text-gray-600">10,000원</p>
+    </div>
+    <div class="details">
+        <p>커피리큐르, 아마레토, 아이리쉬크림이 섞인 달콤하고 오묘한 맛의 칵테일.</p>
+    </div>
+</div>
+
+<!-- 프렌치커넥션 -->
+<div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <img src="Images/프렌치커넥션.jpg" alt="프렌치커넥션" class="drink-image">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">프렌치커넥션</h3>
+        <p class="text-gray-600">10,000원</p>
+    </div>
+    <div class="details">
+        <p>코냑과 아마레토의 부드럽고 진한 조화가 인상적인 칵테일.</p>
+    </div>
+</div>
         </div>
 
         <div id="whiskey" class="menu-section mb-12">
@@ -396,13 +1175,32 @@
         </div>
         <!-- Include all other sections (whiskey, beer, vodka, tequila, liqueur, menu) -->
     </div>
-
+<footer class="bg-gray-900 text-white text-center py-4 mt-8 hidden" id="footer">
+    <p class="text-sm">Designed by Mojin</p>
+</footer>
     <script>
-        function toggleDetails(id) {
-            const details = document.getElementById(id);
-            details.classList.toggle('show');
-        }
+        function toggleDetails(event) {
+    const details = event.currentTarget.querySelector('.details');
+    
+    // بررسی وضعیت نمایش توضیحات
+    if (details.classList.contains('show')) {
+        details.classList.remove('show');
+        details.style.opacity = '0';
+        details.style.pointerEvents = 'none';
+    } else {
+        details.classList.add('show');
+        details.style.opacity = '1';
+        details.style.pointerEvents = 'auto';
+    }
+}
 
+// اضافه کردن رویداد کلیک به همه آیتم‌های منو
+document.addEventListener('DOMContentLoaded', function () {
+    const menuItems = document.querySelectorAll('.menu-item');
+    menuItems.forEach(item => {
+        item.addEventListener('click', toggleDetails);
+    });
+});
         // Highlight active menu link
         const menuLinks = document.querySelectorAll('.menu-link');
         const navContainer = document.querySelector('.nav-container');
@@ -559,6 +1357,22 @@ document.addEventListener('DOMContentLoaded', function() {
         clickable.setAttribute('onclick', `toggleDetails('${id}')`);
     });
 });
+
+document.addEventListener('scroll', function () {
+    const footer = document.getElementById('footer');
+    const scrollPosition = window.innerHeight + window.scrollY;
+    const documentHeight = document.documentElement.scrollHeight;
+    const threshold = 100; // فاصله‌ای که از انتهای صفحه نباید عبور کنیم
+
+    if (scrollPosition >= documentHeight - threshold) {
+        footer.classList.remove('hidden');
+        footer.classList.add('visible');
+    } else {
+        footer.classList.remove('visible');
+        footer.classList.add('hidden');
+    }
+});
+
 </script>
 
 </body>
