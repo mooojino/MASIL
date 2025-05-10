@@ -17,6 +17,10 @@
             cursor: pointer;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* سایه پایه */
         }
+        .menu-item h3 {
+font-size: 1.0rem; /* سایز دلخواه برای متن h3 /
+font-weight: bold; / بولد کردن متن */
+}
         .menu-item:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* سایه بیشتر در هاور */
@@ -125,7 +129,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            z-index: 9999999999;
+            z-index: 99999;
             opacity: 1.0;
             transform: translateY(-50%) translateX(50%);
             right: 0;
@@ -193,7 +197,6 @@
             <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <!-- Gin and Tonic -->
                 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg">
-                    <div class="badge badge-new">New</div>
                     <img src="https://i.ibb.co/ZRYSJ07T/Picsart-25-05-06-01-17-45-026.webp " alt="Gin and Tonic" class="drink-image">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2"><span class="ko-name">진토닉</span><span class="en-name hidden">Gin and Tonic</span></h3>
@@ -324,7 +327,6 @@
 
 <!-- Monkey Banana -->
 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-<div class="badge badge-popular">Popular</div>
 <img src="Images/몽키바나나.jpg" alt="Monkey Banana" class="drink-image">
 <div class="p-6">
     <h3 class="text-xl font-semibold mb-2"><span class="ko-name">몽키바나나</span><span class="en-name hidden">Monkey Banana</span></h3>
@@ -338,6 +340,7 @@
 
 <!-- Pink Punch -->
 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <div class="badge badge-new">New</div>
 <img src="Images/핑크펀치.jpg" alt="Pink Punch" class="drink-image">
 <div class="p-6">
     <h3 class="text-xl font-semibold mb-2"><span class="ko-name">핑크펀치</span><span class="en-name hidden">Pink Punch</span></h3>
@@ -351,6 +354,7 @@
 
 <!-- Salty Dog -->
 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <div class="badge badge-new">New</div>
 <img src="Images/솔티독.jpg" alt="솔티독" class="drink-image">
 <div class="p-6">
     <h3 class="text-xl font-semibold mb-2"><span class="ko-name">솔티독</span><span class="en-name hidden">Salty Dog</span></h3>
@@ -416,7 +420,7 @@
 
 <!-- Espresso Martini -->
 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-<div class="badge badge-special">Special</div>
+    <div class="badge badge-new">New</div>
 <img src="Images/에스프레소 마티니.jpg" alt="에스프레소 마티니" class="drink-image">
 <div class="p-6">
     <h3 class="text-xl font-semibold mb-2"><span class="ko-name">에스프레소 마티니</span><span class="en-name hidden">Espresso Martini</span></h3>
@@ -430,6 +434,7 @@
 
 <!-- Blue Margarita -->
 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <div class="badge badge-new">New</div>
 <img src="Images/블루마가리타.jpg" alt="블루마가리타" class="drink-image">
 <div class="p-6">
     <h3 class="text-xl font-semibold mb-2"><span class="ko-name">블루마가리타</span><span class="en-name hidden">Blue Margarita</span></h3>
@@ -443,6 +448,7 @@
 
 <!-- Cherry Sidecar -->
 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <div class="badge badge-new">New</div>
 <img src="Images/체리사이드카.jpg" alt="체리사이드카" class="drink-image">
 <div class="p-6">
     <h3 class="text-xl font-semibold mb-2"><span class="ko-name">체리사이드카</span><span class="en-name hidden">Cherry Sidecar</span></h3>
@@ -456,6 +462,7 @@
 
 <!-- Singapore Sling -->
 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <div class="badge badge-new">New</div>
 <img src="Images/싱가폴슬링.jpg" alt="싱가폴슬링" class="drink-image">
 <div class="p-6">
     <h3 class="text-xl font-semibold mb-2"><span class="ko-name">싱가폴슬링</span><span class="en-name hidden">Singapore Sling</span></h3>
@@ -482,7 +489,6 @@
 
 <!-- Tequila Sunrise -->
 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-<div class="badge badge-popular">Popular</div>
 <img src="Images/데킬라선라이즈.jpg" alt="데킬라선라이즈" class="drink-image">
 <div class="p-6">
     <h3 class="text-xl font-semibold mb-2"><span class="ko-name">데킬라선라이즈</span><span class="en-name hidden">Tequila Sunrise</span></h3>
@@ -496,6 +502,7 @@
 
 <!-- Lemon Drop -->
 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <div class="badge badge-new">New</div>
 <img src="Images/레몬드랍.jpg" alt="레몬드랍" class="drink-image">
 <div class="p-6">
     <h3 class="text-xl font-semibold mb-2"><span class="ko-name">레몬드랍</span><span class="en-name hidden">Lemon Drop</span></h3>
@@ -522,7 +529,6 @@
 
 <!-- Long Island Iced Tea -->
 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-<div class="badge badge-special">Strong</div>
 <img src="Images/롱아일랜드아이스티.jpg" alt="롱아일랜드아이스티" class="drink-image">
 <div class="p-6">
     <h3 class="text-xl font-semibold mb-2"><span class="ko-name">롱아일랜드아이스티</span><span class="en-name hidden">Long Island Iced Tea</span></h3>
@@ -536,7 +542,7 @@
 
 <!-- Long Beach Iced Tea -->
 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-<div class="badge badge-special">Strong</div>
+    <div class="badge badge-new">New</div>
 <img src="Images/롱비치아이스티.jpg" alt="롱비치아이스티" class="drink-image">
 <div class="p-6">
     <h3 class="text-xl font-semibold mb-2"><span class="ko-name">롱비치아이스티</span><span class="en-name hidden">Long Beach Iced Tea</span></h3>
@@ -550,7 +556,7 @@
 
 <!-- Tokyo Iced Tea -->
 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-<div class="badge badge-special">Strong</div>
+    <div class="badge badge-new">New</div>
 <img src="Images/도쿄아이스티.jpg" alt="도쿄아이스티" class="drink-image">
 <div class="p-6">
     <h3 class="text-xl font-semibold mb-2"><span class="ko-name">도쿄아이스티</span><span class="en-name hidden">Tokyo Iced Tea</span></h3>
@@ -564,7 +570,6 @@
 
 <!-- AMF -->
 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-<div class="badge badge-special">Strong</div>
 <img src="Images/AMF.jpg" alt="AMF" class="drink-image">
 <div class="p-6">
     <h3 class="text-xl font-semibold mb-2"><span class="ko-name">AMF</span><span class="en-name hidden">Adios Motherf**ker</span></h3>
@@ -662,7 +667,7 @@
     <p class="text-gray-600">7,000원</p>
 </div>
 <div class="details">
-    <p class="ko-detail">코코넛�과 우유가 어워지는 부들은 캔텍일</p>
+    <p class="ko-detail">코코넛럼과 우유가 어워지는 부들은 캔텍일</p>
     <p class="en-detail hidden">Soft cocktail with coconut and milk</p>
 </div>
 </div>
@@ -708,7 +713,6 @@
 
 <!-- Mojito -->
 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-<div class="badge badge-popular">Popular</div>
 <img src="Images/모히토.jpg" alt="모히토" class="drink-image">
 <div class="p-6">
     <h3 class="text-xl font-semibold mb-2"><span class="ko-name">모히토</span><span class="en-name hidden">Mojito</span></h3>
@@ -722,10 +726,9 @@
 
 <!-- Pina Colada -->
 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-<div class="badge badge-popular">Popular</div>
-<img src="Images/피나콜라да.jpg" alt="피나콜라да" class="drink-image">
+<img src="Images/피나콜라다.jpg" alt="피나콜라да" class="drink-image">
 <div class="p-6">
-    <h3 class="text-xl font-semibold mb-2"><span class="ko-name">피나콜라да</span><span class="en-name hidden">Pina Colada</span></h3>
+    <h3 class="text-xl font-semibold mb-2"><span class="ko-name">피나콜라다다</span><span class="en-name hidden">Pina Colada</span></h3>
     <p class="text-gray-600">7,000원</p>
 </div>
 <div class="details">
@@ -762,6 +765,7 @@
 
 <!-- Descartes -->
 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <div class="badge badge-new">New</div>
 <img src="Images/데카르트.jpg" alt="데카르트" class="drink-image">
 <div class="p-6">
     <h3 class="text-xl font-semibold mb-2"><span class="ko-name">데카르트</span><span class="en-name hidden">Descartes</span></h3>
@@ -827,6 +831,7 @@
 
 <!-- Godmother -->
 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <div class="badge badge-new">New</div>
 <img src="Images/갓마더.jpg" alt="갓마더" class="drink-image">
 <div class="p-6">
     <h3 class="text-xl font-semibold mb-2"><span class="ko-name">갓마더</span><span class="en-name hidden">Godmother</span></h3>
@@ -840,6 +845,7 @@
 
 <!-- Cassis Frappe -->
 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <div class="badge badge-new">New</div>
 <img src="Images/카시스프라페.jpg" alt="카시스 프라페" class="drink-image">
 <div class="p-6">
     <h3 class="text-xl font-semibold mb-2"><span class="ko-name">카시스 프라페</span><span class="en-name hidden">Cassis Frappe</span></h3>
@@ -853,6 +859,7 @@
 
 <!-- White Lady -->
 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <div class="badge badge-new">New</div>
 <img src="Images/화이트레이디.jpg" alt="화이트레이디" class="drink-image">
 <div class="p-6">
     <h3 class="text-xl font-semibold mb-2"><span class="ko-name">화이트레이디</span><span class="en-name hidden">White Lady</span></h3>
@@ -866,6 +873,7 @@
 
 <!-- XYZ -->
 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <div class="badge badge-new">New</div>
 <img src="Images/XYZ.jpg" alt="XYZ" class="drink-image">
 <div class="p-6">
     <h3 class="text-xl font-semibold mb-2"><span class="ko-name">XYZ</span><span class="en-name hidden">XYZ</span></h3>
@@ -879,6 +887,7 @@
 
 <!-- Daiquiri -->
 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <div class="badge badge-new">New</div>
 <img src="Images/다이키리.jpg" alt="다이키리" class="drink-image">
 <div class="p-6">
     <h3 class="text-xl font-semibold mb-2"><span class="ko-name">다이키리</span><span class="en-name hidden">Daiquiri</span></h3>
@@ -892,6 +901,7 @@
 
 <!-- Kamikaze -->
 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <div class="badge badge-new">New</div>
 <img src="Images/카미카제.jpg" alt="카미카제" class="drink-image">
 <div class="p-6">
     <h3 class="text-xl font-semibold mb-2"><span class="ko-name">카미카제</span><span class="en-name hidden">Kamikaze</span></h3>
@@ -905,6 +915,7 @@
 
 <!-- Wildflower -->
 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <div class="badge badge-new">New</div>
 <img src="Images/와일드플라워.jpg" alt="와일드플라워" class="drink-image">
 <div class="p-6">
     <h3 class="text-xl font-semibold mb-2"><span class="ko-name">와일드플라워</span><span class="en-name hidden">Wildflower</span></h3>
@@ -918,6 +929,7 @@
 
 <!-- Baileys Milk -->
 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <div class="badge badge-new">New</div>
 <img src="Images/베일리스밀크.jpg" alt="베일리스밀크" class="drink-image">
 <div class="p-6">
     <h3 class="text-xl font-semibold mb-2"><span class="ko-name">베일리스밀크</span><span class="en-name hidden">Baileys Milk</span></h3>
@@ -931,6 +943,7 @@
 
 <!-- Whiskey Sour -->
 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <div class="badge badge-new">New</div>
 <img src="Images/위스키사워.jpg" alt="위스키 사워" class="drink-image">
 <div class="p-6">
     <h3 class="text-xl font-semibold mb-2"><span class="ko-name">위스키 사워</span><span class="en-name hidden">Whiskey Sour</span></h3>
@@ -944,6 +957,7 @@
 
 <!-- Old Fashioned -->
 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <div class="badge badge-new">New</div>
 <img src="Images/올드패션드.jpg" alt="올드패션드" class="drink-image">
 <div class="p-6">
     <h3 class="text-xl font-semibold mb-2"><span class="ko-name">올드패션드</span><span class="en-name hidden">Old Fashioned</span></h3>
@@ -957,6 +971,7 @@
 
 <!-- Manhattan -->
 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <div class="badge badge-new">New</div>
 <img src="Images/맨하탄.jpg" alt="맨하탄 | Manhattan" class="drink-image">
 <div class="p-6">
     <h3 class="text-xl font-semibold mb-2"><span class="ko-name">맨하탄</span><span class="en-name hidden">Manhattan</span></h3>
@@ -970,6 +985,7 @@
 
 <!-- Rusty Nail -->
 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <div class="badge badge-new">New</div>
 <img src="Images/러스티네일.jpg" alt="러스티네일 | Rusty Nail" class="drink-image">
 <div class="p-6">
     <h3 class="text-xl font-semibold mb-2"><span class="ko-name">러스티네일</span><span class="en-name hidden">Rusty Nail</span></h3>
@@ -983,6 +999,7 @@
 
 <!-- Negroni -->
 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <div class="badge badge-new">New</div>
 <img src="Images/네그로니.jpg" alt="네그로니 | Negroni" class="drink-image">
 <div class="p-6">
     <h3 class="text-xl font-semibold mb-2"><span class="ko-name">네그로니</span><span class="en-name hidden">Negroni</span></h3>
@@ -1009,6 +1026,7 @@
 
 <!-- French Connection -->
 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
+    <div class="badge badge-new">New</div>
 <img src="Images/프렌치커넥션.jpg" alt="프렌치커넥션 | French Connection" class="drink-image">
 <div class="p-6">
     <h3 class="text-xl font-semibold mb-2"><span class="ko-name">프렌치커넥션</span><span class="en-name hidden">French Connection</span></h3>
@@ -1026,15 +1044,17 @@
 <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b-2 border-red-500 pb-2">위스키/꼬냑</h2>
 <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
 
+<!-- 없는 메뉴 -->
 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-    <img src="https://i.ibb.co/ZRYSJ07T/Picsart-25-05-06-01-17-45-026.webp" alt="마가리타" class="drink-image">
-    <div class="p-6" onclick="toggleDetails('cocktail1')">
-        <h3 class="text-xl font-semibold mb-2">없음 메뉴</h3>
-        <p class="text-gray-600">0원</p>
-        <div id="cocktail1" class="details mt-3 text-gray-500 hidden">
-            <p>없음 메뉴</p>
-        </div>
-    </div>
+<img src="Images/Unavailable menu.jpg" alt="Unavailable menu | French Connection" class="drink-image">
+<div class="p-6">
+    <h3 class="text-xl font-semibold mb-2"><span class="ko-name">없는 메뉴</span><span class="en-name hidden">Unavailable menu</span></h3>
+    <p class="text-gray-600">-원</p>
+</div>
+<div class="details">
+    <p class="ko-detail">없는 메뉴</p>
+    <p class="en-detail hidden">Unavailable menu</p>
+</div>
 </div>
 </div>
 </div>
@@ -1044,15 +1064,17 @@
 <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
 
 
+<!-- 없는 메뉴 -->
 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-    <img src="https://i.ibb.co/ZRYSJ07T/Picsart-25-05-06-01-17-45-026.webp" alt="마가리타" class="drink-image">
-    <div class="p-6" onclick="toggleDetails('cocktail1')">
-        <h3 class="text-xl font-semibold mb-2">없음 메뉴</h3>
-        <p class="text-gray-600">0원</p>
-        <div id="cocktail1" class="details mt-3 text-gray-500 hidden">
-            <p>없음 메뉴</p>
-        </div>
-    </div>
+<img src="Images/Unavailable menu.jpg" alt="Unavailable menu | French Connection" class="drink-image">
+<div class="p-6">
+    <h3 class="text-xl font-semibold mb-2"><span class="ko-name">없는 메뉴</span><span class="en-name hidden">Unavailable menu</span></h3>
+    <p class="text-gray-600">-원</p>
+</div>
+<div class="details">
+    <p class="ko-detail">없는 메뉴</p>
+    <p class="en-detail hidden">Unavailable menu</p>
+</div>
 </div>
 </div>
 </div>
@@ -1063,15 +1085,17 @@
 <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b-2 border-red-500 pb-2">보드카/럼</h2>
 <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
 
+<!-- 없는 메뉴 -->
 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-    <img src="https://i.ibb.co/ZRYSJ07T/Picsart-25-05-06-01-17-45-026.webp" alt="마가리타" class="drink-image">
-    <div class="p-6" onclick="toggleDetails('cocktail1')">
-        <h3 class="text-xl font-semibold mb-2">없음 메뉴</h3>
-        <p class="text-gray-600">0원</p>
-        <div id="cocktail1" class="details mt-3 text-gray-500 hidden">
-            <p>없음 메뉴</p>
-        </div>
-    </div>
+<img src="Images/Unavailable menu.jpg" alt="Unavailable menu | French Connection" class="drink-image">
+<div class="p-6">
+    <h3 class="text-xl font-semibold mb-2"><span class="ko-name">없는 메뉴</span><span class="en-name hidden">Unavailable menu</span></h3>
+    <p class="text-gray-600">-원</p>
+</div>
+<div class="details">
+    <p class="ko-detail">없는 메뉴</p>
+    <p class="en-detail hidden">Unavailable menu</p>
+</div>
 </div>
 </div>
 </div>
@@ -1081,15 +1105,17 @@
 <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
 
 
+<!-- 없는 메뉴 -->
 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-    <img src="https://i.ibb.co/ZRYSJ07T/Picsart-25-05-06-01-17-45-026.webp" alt="마가리타" class="drink-image">
-    <div class="p-6" onclick="toggleDetails('cocktail1')">
-        <h3 class="text-xl font-semibold mb-2">없음 메뉴</h3>
-        <p class="text-gray-600">0원</p>
-        <div id="cocktail1" class="details mt-3 text-gray-500 hidden">
-            <p>없음 메뉴</p>
-        </div>
-    </div>
+<img src="Images/Unavailable menu.jpg" alt="Unavailable menu | French Connection" class="drink-image">
+<div class="p-6">
+    <h3 class="text-xl font-semibold mb-2"><span class="ko-name">없는 메뉴</span><span class="en-name hidden">Unavailable menu</span></h3>
+    <p class="text-gray-600">-원</p>
+</div>
+<div class="details">
+    <p class="ko-detail">없는 메뉴</p>
+    <p class="en-detail hidden">Unavailable menu</p>
+</div>
 </div>
 </div>
 </div>
@@ -1098,36 +1124,43 @@
 <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b-2 border-red-500 pb-2">리큐르/스파클링와인</h2>
 <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
 
+<!-- 없는 메뉴 -->
 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-    <img src="https://i.ibb.co/ZRYSJ07T/Picsart-25-05-06-01-17-45-026.webp" alt="마가리타" class="drink-image">
-    <div class="p-6" onclick="toggleDetails('cocktail1')">
-        <h3 class="text-xl font-semibold mb-2">없음 메뉴</h3>
-        <p class="text-gray-600">0원</p>
-        <div id="cocktail1" class="details mt-3 text-gray-500 hidden">
-            <p>없음 메뉴</p>
-        </div>
-    </div>
+<img src="Images/Unavailable menu.jpg" alt="Unavailable menu | French Connection" class="drink-image">
+<div class="p-6">
+    <h3 class="text-xl font-semibold mb-2"><span class="ko-name">없는 메뉴</span><span class="en-name hidden">Unavailable menu</span></h3>
+    <p class="text-gray-600">-원</p>
+</div>
+<div class="details">
+    <p class="ko-detail">없는 메뉴</p>
+    <p class="en-detail hidden">Unavailable menu</p>
 </div>
 </div>
 </div>
+</div>
+
+
 <div id="menu" class="menu-section mb-12">
 <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b-2 border-red-500 pb-2">메뉴/음료</h2>
 <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
 
+<!-- 없는 메뉴 -->
 <div class="menu-item bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg">
-    <img src="https://i.ibb.co/ZRYSJ07T/Picsart-25-05-06-01-17-45-026.webp" alt="마가리타" class="drink-image">
-    <div class="p-6" onclick="toggleDetails('cocktail1')">
-        <h3 class="text-xl font-semibold mb-2">없음 메뉴</h3>
-        <p class="text-gray-600">0원</p>
-        <div id="cocktail1" class="details mt-3 text-gray-500 hidden">
-            <p>없음 메뉴</p>
-        </div>
-    </div>
+<img src="Images/Unavailable menu.jpg" alt="Unavailable menu | French Connection" class="drink-image">
+<div class="p-6">
+    <h3 class="text-xl font-semibold mb-2"><span class="ko-name">없는 메뉴</span><span class="en-name hidden">Unavailable menu</span></h3>
+    <p class="text-gray-600">-원</p>
+</div>
+<div class="details">
+    <p class="ko-detail">없는 메뉴</p>
+    <p class="en-detail hidden">Unavailable menu</p>
+</div>
+</div>
             </div>
         </div>
     </div>
-    <footer class="bg-gray-900 text-white text-center py-4 fixed bottom-0 left-0 right-0 w-full z-50" id="footer">
-        <p class="text-sm">Designed by Mojin</p>
+    <footer class="bg-gray-900 text-white text-center py-4 mt-8 hidden" id="footer">
+    <p class="text-sm">Designed by Mojin</p>
     </footer>
     <script>
 
@@ -1273,6 +1306,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     footer.classList.add('hidden');
                 }
             });
+
+            
             // 메뉴 링크 스크롤
             document.querySelectorAll('.menu-link').forEach(link => {
                 link.addEventListener('click', function(e) {
@@ -1287,6 +1322,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
             });
         });
+
+
+        
 
         document.querySelectorAll(".drink-image").forEach(img => {
   img.addEventListener("error", () => { img.src = "لینک_تصویر_پیش_فرض"; });
